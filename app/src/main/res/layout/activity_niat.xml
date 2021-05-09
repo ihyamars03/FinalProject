@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.NiatActivity">
+    tools:context=".activities.HukumActivity">
 
     <ImageView
         android:id="@+id/ic_back_niat"
@@ -18,77 +18,81 @@
         android:layout_marginLeft="0dp"
         android:src="@drawable/ic_back" />
 
-    <RelativeLayout
-        android:id="@+id/Layout_quran"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginHorizontal="26dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_marginBottom="519dp"
-        android:background="@drawable/ic_corner_red">
-
-        <TextView
-            android:id="@+id/tc_niat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="48dp"
-            android:text="Niat dan Bacaan"
-            android:fontFamily="@font/montserratsemibold"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tc_niat"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="9dp"
-            android:text="5 Dasar hukum dalam islam"
-            android:fontFamily="@font/montserratregular"
-            android:textSize="10sp" />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_width="236dp"
-        android:layout_height="235dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="230dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginBottom="519dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="33dp"
-        android:src="@drawable/niat" />
+        android:layout_marginBottom="519dp"
+        android:layout_marginHorizontal="26dp">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="271dp">
         <RelativeLayout
-            android:id="@+id/Layout_surat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_corner_red">
+            <TextView
+                android:id="@+id/tc_niat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/montserratsemibold"
+                android:text="Niat dan Bacaan"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tc_niat"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/montserratregular"
+                android:text="5 Dasar hukum dalam islam"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="230dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/niat" />
+
+    </FrameLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="271dp"
+        android:layout_marginHorizontal="26dp"
+        app:cardCornerRadius="15dp">
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_niat"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="26dp">
+                android:layout_height="match_parent">
 
-            </androidx.recyclerview.widget.RecyclerView>
-        </RelativeLayout>
-    </ScrollView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_niat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
