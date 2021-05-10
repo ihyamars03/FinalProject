@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_quran.setOnClickListener(){
-            startActivity(Intent(this, Layout_quran::class.java))
+            startActivity(Intent(this, QuranActivity::class.java))
         }
 
         btn_hukum.setOnClickListener(){
